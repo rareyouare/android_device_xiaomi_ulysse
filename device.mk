@@ -93,7 +93,8 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    vndk_package
+    vndk_package \
+    vndk-ext
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
