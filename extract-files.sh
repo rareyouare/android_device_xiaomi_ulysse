@@ -11,17 +11,8 @@ function blob_fixup() {
         vendor/lib/lib_fpc_tac_shared.so|vendor/lib64/lib_fpc_tac_shared.so)
             "${PATCHELF}" --add-needed "libshims_binder.so" "${2}"
             ;;
-        vendor/lib64/hw/gf_fingerprint.default.so \
-        |vendor/lib64/libgoodixfingerprintd_binder.so \
-        |vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so \
-        |vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
-            "${PATCHELF_0_8}" --remove-needed "libbacktrace.so" "${2}"
-            "${PATCHELF_0_8}" --remove-needed "libkeystore_binder.so" "${2}"
-            "${PATCHELF_0_8}" --remove-needed "libkeymaster_messages.so" "${2}"
+        vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
             "${PATCHELF_0_8}" --remove-needed "libprotobuf-cpp-lite.so" "${2}"
-            "${PATCHELF_0_8}" --remove-needed "libsoftkeymaster.so" "${2}"
-            "${PATCHELF_0_8}" --remove-needed "libsoftkeymasterdevice.so" "${2}"
-            "${PATCHELF_0_8}" --remove-needed "libunwind.so" "${2}"
             ;;
     esac
 }
