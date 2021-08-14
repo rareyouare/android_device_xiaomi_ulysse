@@ -12,6 +12,10 @@ DEVICE_PATH := device/xiaomi/ulysse
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := ulysse,ugglite,ugg
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_ulysse
+TARGET_RECOVERY_DEVICE_MODULES := libinit_ulysse
+
 # Kernel
 TARGET_KERNEL_CONFIG := mi8937_defconfig
 
